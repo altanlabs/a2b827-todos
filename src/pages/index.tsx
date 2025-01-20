@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, PlusCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
@@ -122,7 +122,7 @@ export default function IndexPage() {
             <Card>
               <CardContent className="pt-6">
                 <h3 className="text-xl font-bold">{category.name}</h3>
-                <Accordion>
+                <Accordion type="multiple">
                   {category.subcategories.map(subcategory => (
                     <div key={subcategory.id} className="mb-4">
                       <h4 className="text-lg font-semibold">{subcategory.name}</h4>
